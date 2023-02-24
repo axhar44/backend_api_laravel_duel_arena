@@ -2,15 +2,15 @@
   'app' => 
   array (
     'name' => 'Laravel',
-    'env' => 'local',
-    'debug' => true,
+    'env' => 'production',
+    'debug' => false,
     'url' => 'http://localhost',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:GxHbpgyYianacOvdIozqaD1EUAgUJBk5KShdln0Ae+I=',
+    'key' => NULL,
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -131,18 +131,18 @@
   ),
   'broadcasting' => 
   array (
-    'default' => 'pusher',
+    'default' => 'null',
     'connections' => 
     array (
       'pusher' => 
       array (
         'driver' => 'pusher',
-        'key' => '781df2fba5c20dd72df9',
-        'secret' => 'af51cb09cba2a8320c00',
-        'app_id' => '1504078',
+        'key' => NULL,
+        'secret' => NULL,
+        'app_id' => NULL,
         'options' => 
         array (
-          'cluster' => 'ap2',
+          'cluster' => NULL,
           'useTLS' => true,
         ),
       ),
@@ -190,7 +190,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\storage\\framework/cache/data',
+        'path' => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -223,8 +223,8 @@
       'dynamodb' => 
       array (
         'driver' => 'dynamodb',
-        'key' => '',
-        'secret' => '',
+        'key' => NULL,
+        'secret' => NULL,
         'region' => 'us-east-1',
         'table' => 'cache',
         'endpoint' => NULL,
@@ -273,7 +273,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'dualarena',
+        'database' => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\database\\database.sqlite',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -283,8 +283,8 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'dualarena',
-        'username' => 'root',
+        'database' => 'forge',
+        'username' => 'forge',
         'password' => '',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
@@ -302,9 +302,9 @@
         'driver' => 'pgsql',
         'url' => NULL,
         'host' => '127.0.0.1',
-        'port' => '3306',
-        'database' => 'dualarena',
-        'username' => 'root',
+        'port' => '5432',
+        'database' => 'forge',
+        'username' => 'forge',
         'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
@@ -316,10 +316,10 @@
       array (
         'driver' => 'sqlsrv',
         'url' => NULL,
-        'host' => '127.0.0.1',
-        'port' => '3306',
-        'database' => 'dualarena',
-        'username' => 'root',
+        'host' => 'localhost',
+        'port' => '1433',
+        'database' => 'forge',
+        'username' => 'forge',
         'password' => '',
         'charset' => 'utf8',
         'prefix' => '',
@@ -361,22 +361,22 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\storage\\app',
+        'root' => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\storage\\app/public',
-        'url' => 'http://localhost/storage',
+        'root' => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\storage\\app/public',
+        'url' => '/storage',
         'visibility' => 'public',
       ),
       's3' => 
       array (
         'driver' => 's3',
-        'key' => '',
-        'secret' => '',
-        'region' => 'us-east-1',
-        'bucket' => '',
+        'key' => NULL,
+        'secret' => NULL,
+        'region' => NULL,
+        'bucket' => NULL,
         'url' => NULL,
         'endpoint' => NULL,
         'use_path_style_endpoint' => false,
@@ -384,7 +384,7 @@
     ),
     'links' => 
     array (
-      'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\public\\storage' => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\storage\\app/public',
+      'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\public\\storage' => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -404,7 +404,7 @@
   'logging' => 
   array (
     'default' => 'stack',
-    'deprecations' => NULL,
+    'deprecations' => 'null',
     'channels' => 
     array (
       'stack' => 
@@ -419,13 +419,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\storage\\logs/laravel.log',
+        'path' => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\storage\\logs/laravel.log',
+        'path' => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -435,7 +435,7 @@
         'url' => NULL,
         'username' => 'Laravel Log',
         'emoji' => ':boom:',
-        'level' => 'debug',
+        'level' => 'critical',
       ),
       'papertrail' => 
       array (
@@ -476,7 +476,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\storage\\logs/laravel.log',
+        'path' => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -488,11 +488,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'smtp.titan.email',
-        'port' => '465',
+        'host' => 'smtp.mailgun.org',
+        'port' => 587,
         'encryption' => 'ssl',
-        'username' => 'testdev@logowebtech.com',
-        'password' => 'theseventhzodiac@123',
+        'username' => NULL,
+        'password' => NULL,
         'timeout' => NULL,
         'auth_mode' => NULL,
       ),
@@ -542,7 +542,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\resources\\views/vendor/mail',
+        0 => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -575,8 +575,8 @@
       'sqs' => 
       array (
         'driver' => 'sqs',
-        'key' => '',
-        'secret' => '',
+        'key' => NULL,
+        'secret' => NULL,
         'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
         'queue' => 'default',
         'suffix' => NULL,
@@ -609,7 +609,6 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => 'localhost',
     ),
     'guard' => 
     array (
@@ -636,18 +635,18 @@
     ),
     'ses' => 
     array (
-      'key' => '',
-      'secret' => '',
+      'key' => NULL,
+      'secret' => NULL,
       'region' => 'us-east-1',
     ),
   ),
   'session' => 
   array (
     'driver' => 'file',
-    'lifetime' => '120',
+    'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\storage\\framework/sessions',
+    'files' => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -667,9 +666,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\resources\\views',
+      0 => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\resources\\views',
     ),
-    'compiled' => 'D:\\john_gaming_webs\\duel_arena_react_js_new-main\\laravel_backend_api\\backend API\\storage\\framework\\views',
+    'compiled' => 'E:\\duel_arena_react_backup_old\\backend_api_laravel_duel_arena\\storage\\framework\\views',
   ),
   'websockets' => 
   array (
@@ -681,10 +680,10 @@
     array (
       0 => 
       array (
-        'id' => '1504078',
-        'name' => 'Laravel',
-        'key' => '781df2fba5c20dd72df9',
-        'secret' => 'af51cb09cba2a8320c00',
+        'id' => NULL,
+        'name' => NULL,
+        'key' => NULL,
+        'secret' => NULL,
         'path' => NULL,
         'capacity' => NULL,
         'cluster' => 'ap2',
